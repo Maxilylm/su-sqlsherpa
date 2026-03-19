@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #e0e0e0;
+  --card: #141414;
+  --card-border: #2a2a2a;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --tab-inactive: #1a1a1a;
+  --code-bg: #111111;
+  --success: #22c55e;
+  --muted: #888888;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-border: var(--card-border);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-tab-inactive: var(--tab-inactive);
+  --color-code-bg: var(--code-bg);
+  --color-success: var(--success);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--card-border);
+  border-radius: 3px;
+}
+
+/* Textarea styling */
+textarea {
+  font-family: var(--font-mono), ui-monospace, monospace;
+}
+
+/* Markdown-like output styling */
+.explanation h1, .explanation h2, .explanation h3 {
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.explanation h1 { font-size: 1.25rem; }
+.explanation h2 { font-size: 1.125rem; }
+.explanation h3 { font-size: 1rem; }
+.explanation p { margin-bottom: 0.75rem; line-height: 1.7; }
+.explanation ul, .explanation ol { margin-left: 1.5rem; margin-bottom: 0.75rem; }
+.explanation li { margin-bottom: 0.25rem; line-height: 1.6; }
+.explanation code {
+  background: var(--code-bg);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.875rem;
+}
+.explanation pre {
+  background: var(--code-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 0.75rem;
+}
+.explanation pre code {
+  background: none;
+  padding: 0;
+}
+.explanation strong {
+  color: #fff;
+  font-weight: 600;
+}
